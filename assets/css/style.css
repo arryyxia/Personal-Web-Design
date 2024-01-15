@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "jost";
+    src: url(../fonts/Jost/static/Jost-Bold.ttf);
+}
+
+
+/* general settings */
+*{
+    font-family: "poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.4s;   
+    text-decoration: none; 
+}
+:root{
+    --primary: #033991;
+    --accent: #D204C4;
+    --bg: #E6EEFE;
+    --bg-kartu: #DBE6F8;
+    --bg-kartu2: #E1D1FD;
+    --bg-kartu3: #E3E0FD;
+    --bg-footer: #DBE4F2;
+    --bg-input: #4e4e4e15;
+    --text: #010C1E;
+    --text-a: #000;
+    font-size: 62.5%;
+}
+:root .dark{
+    --primary: #6ca3fc;
+    --accent: #FB2BEE;
+    --bg: #010C1E;
+    --bg-kartu: #071126;
+    --bg-kartu2: #170836;
+    --bg-kartu3: #0C0827;
+    --bg-footer: #0C1524;
+    --bg-input: #0A1938;
+    --text: #E1ECFE;
+    --text-a: #fff;
+}
+body{
+    background-color: var(--bg);
+    font-size: 1.6rem;
+    color: var(--text);
+}
+html::-webkit-scrollbar{
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 16px;
+    background-color: darkgray;
+}
+::selection{
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navigation bar */
+header{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-desktop{
+    display: none;
+}
+.navbar-menu{
+    display: none;
+}
+.mobile-menu{
+    display: none;
+}
+
+/* profile */
+#profile img{
+    width: 100%;
+}
+.profile-descriptions{
+    margin-bottom: 32px;
+}
+.profile-descriptions h3{
+    color: var(--accent);
+    font-family: 'jost';
+    font-size: 2rem;
+}
+.profile-descriptions h1{
+    font-family: 'jost';
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+.profile-descriptions h1 + a{
+    color: var(--text-a);
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+.profile-descriptions p{
+    margin-bottom: 16px;
+}
+.email-me{
+    background-color: var(--accent);
+    color: white;
+}
+.cv{
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--bg-input);
+}
+.profile-links{
+    display: flex;
+    gap: 32px;
+    align-items: start;
+}
+.profile-buttons{
+    display: flex;
+    flex-direction: column;
+}
+.social-media{
+    margin-left: 16px;
+}
+
+/* additional utility */
+.container{
+    max-width: 1600px;
+    width: 100%;
+    padding: 0 32px;
+    margin: 0 auto;
+}
+@media (min-width: 768px){
+    .container{
+        padding: 0 64px;
+    }
+}
+@media (min-width: 1048px){
+    .container{
+        padding: 0 128px;
+    }
+}
+.btn{
+    padding: 13px 22px;
+    border-radius: 3px;
+    border: none;
+}
+.text-a{
+    color: var(--text-a);
+}
+
